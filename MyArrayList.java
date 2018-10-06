@@ -58,12 +58,10 @@ class MyArrayList<E> {
         if(index < 0 || index > size)
           throw new IndexOutOfBoundsException();
         else {
-          Object remove_item = element_array[index];
-          for(int i = index; i < size; i++) {
-              element_array[i] = element_array[i++];
+          for(int i = index; i < size-1; i++) {
+              element_array[i] = element_array[i+1];
           }
           size--;
-          remove_item = null;
         }
       }
 
