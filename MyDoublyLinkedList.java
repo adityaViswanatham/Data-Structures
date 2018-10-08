@@ -35,6 +35,7 @@ class MyDoublyLinkedList<T> {
       head.prev = new_Node;
     }
       head = new_Node;
+      size++;
   }
 
   // Add Node at the Tail.
@@ -52,6 +53,7 @@ class MyDoublyLinkedList<T> {
     }
     last.next = new_Node;
     new_Node.prev = last;
+    size++;
   }
 
   // Add Node after a Given Node.
@@ -62,6 +64,7 @@ class MyDoublyLinkedList<T> {
     new_Node.next = node.next;
     if(new_Node.next != null)
       new_Node.next.prev = new_Node;
+    size++;
   }
 
   // Delete Methods.
@@ -75,6 +78,7 @@ class MyDoublyLinkedList<T> {
     head = temp.next;
     head.prev = null;
     temp.next = null;
+    size--;
   }
 
   // Delete at Tail.
@@ -89,6 +93,7 @@ class MyDoublyLinkedList<T> {
     Node<T> prev_Node = temp.prev;
     prev_Node.next = null;
     temp.prev = null;
+    size--;
   }
 
   // Print Method.
