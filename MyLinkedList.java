@@ -5,6 +5,7 @@ class MyLinkedList<T> {
 
   // Node Class for the LinkedList.
   static class Node<T> {
+    // Node Class Attributes.
     T data;
     Node<T> next;
 
@@ -19,6 +20,7 @@ class MyLinkedList<T> {
    int size = 0;
 
    // Constructors.
+   // Default Constructor to facilitate empty linkedlist creation.
    public MyLinkedList() {}
 
    // Constructor to create a linkedlist with an initial value to the head.
@@ -27,7 +29,6 @@ class MyLinkedList<T> {
    }
 
    // Class Methods.
-
    // Add Methods.
    // Add at tail.
    public void addtoTail(T data) {
@@ -107,7 +108,7 @@ class MyLinkedList<T> {
      return size;
    }
 
-   // Main function.
+   // Main function to test the MyLinkedList Class Functions.
    public static void main(String [] args) {
      MyLinkedList<Integer> my_list = new MyLinkedList<>();
      // Testing Add Methods.
@@ -124,5 +125,4 @@ class MyLinkedList<T> {
      System.out.println("/////////////////");
      my_list.printList();
    }
-
 }
