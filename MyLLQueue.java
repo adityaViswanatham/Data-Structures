@@ -51,7 +51,7 @@ public class MyLLQueue<T> {
 		
 		QNode<T> temp = front;
 		front = front.next;
-		
+		// If the size of the queue is 1.
 		if(front == null)
 			rear = null;
 		System.out.println("Removed: " + temp.element);
